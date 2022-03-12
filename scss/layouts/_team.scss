@@ -1,0 +1,44 @@
+@import "../base/colors";
+@import "../base/typography";
+@import "../mixins/mixin";
+
+.team-grid {
+    @include basicLayout (grid , 1fr , 'one' 'two');
+    .heading-team {
+        grid-area: one;
+        width: 80%;
+       justify-self: center;
+       text-align: center;
+    }
+    .cards-team {
+        grid-area: two;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .card-team {
+                background-image: $clr-bg-card-light;
+                transition: .9s ease;
+            }
+            .card-team:hover{
+                transform: translateY(-5px);
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 21rem;
+                align-items: center;
+                margin: 0.625rem 1.25rem;
+                border-radius: 0.625rem;
+                box-shadow: $clr-card-shadow;
+                padding: 0.625rem 1.25rem;
+                color: $clr-primary;
+                img {
+                    width: 50%;
+                    border-radius: 50%;
+                }
+            }
+        }   
+    }
+}

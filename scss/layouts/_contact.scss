@@ -1,0 +1,42 @@
+@import "../base/colors";
+@import "../base/typography";
+@import "../mixins/mixin";
+
+.contact-grid {
+    @include basicLayout(grid , 1fr , 'one' 'two' 'three');
+    .heading-con {
+        grid-area: one;
+        justify-self: center;
+        text-align: center;
+    }
+    form {
+        grid-area: two;
+        width: 100%;
+        label {
+            color: $clr-paragraph-light;
+            font-size: 1.25rem;
+        }
+    }
+    .map {
+        grid-area: three;
+        width: 100%;
+        iframe{
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width: 640px) {
+    .contact-grid {
+        grid-template-areas: "one one"
+                                          "two three";
+      } 
+      .heading-con {
+        grid-area: one;
+      }
+      form {
+        grid-area: two;
+      }
+      .map {
+        grid-area: three;
+      }
+    }

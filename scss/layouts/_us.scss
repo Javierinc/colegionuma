@@ -1,0 +1,83 @@
+@import "../base/colors";
+@import "../base/typography";
+@import "../mixins/mixin";
+.us-grid {
+    @include basicLayout (grid , 1fr , 'one' 'two' 'three' 'four' 'five' 'six' 'seven');
+    align-items: center;
+    .atributes {
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background-image: $clr-bg-card-light;
+        box-shadow: $clr-card-shadow;
+        color: $clr-paragraph-dark;
+        margin-bottom: 20px;
+        transition: .9s ease;
+    }
+    .atributes {
+        p{
+            text-align: justify;
+        }
+    }
+    .atributes:hover {
+        transform: translate(5px, -10px);
+    }
+}
+
+.us-grid:nth-child(1) {
+    grid-area: one;
+}
+.us-grid:nth-child(2) {
+    grid-area: two;
+}
+.us-grid:nth-child(3) {
+    grid-area: three;
+}
+.us-grid:nth-child(4) {
+    grid-area: four;
+}
+.us-grid:nth-child(5) {
+    grid-area: five;
+}
+.us-grid:nth-child(6) {
+    grid-area: six;
+}
+.us-grid:nth-child(7) {
+    grid-area: seven;
+}
+
+@media screen and (min-width: 864px) {
+    .us-grid {
+      grid-template-areas:
+       'one one'
+       'two three'
+       'four five'
+       'six seven';
+    }
+    h1 {
+      grid-area: one;
+    }
+    .who {
+      grid-area: two;
+    }
+    .who-img {
+      grid-area: three;
+    }
+    .what {
+      grid-area: five ;
+    }
+    .what-img {
+      grid-area: four;
+    }
+    .where {
+      grid-area: six;
+    }
+    .where-img {
+      grid-area: seven;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .atributes {
+      width: 80%;
+      height: auto;
+    }
+}

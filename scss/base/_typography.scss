@@ -1,0 +1,13 @@
+$font-500: 500;
+$font-700: 700;
+$font-heading: 2.2rem;
+
+
+h1 {
+    font-size: $font-heading;
+    text-transform: uppercase;
+    color: $clr-heading;
+    font-weight: $font-700;
+    margin-bottom: 2rem;
+    text-align: center;
+}

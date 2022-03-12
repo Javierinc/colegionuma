@@ -1,0 +1,102 @@
+@import "../base/colors";
+@import "../base/typography";
+@import "../mixins/mixin";
+
+.courses-grid {
+    @include basicLayout (grid , 1fr , 'one one one' 'two three four' 'five five five' 'six seven eight' 'nine nine nine' 'ten eleven twelve');
+    align-items: center;
+    .heading-c{
+        grid-area: one;
+    } 
+    .extend-title {
+        width: 80%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .cours {
+        width: 80%;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+            color:#E5E5E7;
+            transition: .9s ease;
+        }
+        i:hover {
+            transform: scale(1.1,1.1);
+            color: $clr-secondary;
+        }
+        p {
+            color: $clr-paragraph-light;
+            font-size: 1.25rem;
+            font-weight: $font-500;
+        }
+
+    }
+    .level-3 {
+        grid-area: two;
+    }
+    .level-1 {
+        grid-area: three;
+    }
+    .level-2 {
+        grid-area: four; 
+    }
+    .times {
+        grid-area: five;
+        @extend .extend-title;
+    }
+    .morning {
+        grid-area: six;
+    }
+    .afternoon{
+        grid-area: seven;
+    }
+    .night {
+        grid-area: eight;
+    }
+    .modalities {
+        grid-area: nine;
+        @extend .extend-title;
+    }
+    .face-to-face {
+        grid-area: ten;
+    }
+    .semi {
+        grid-area: eleven;
+    }
+    .online {
+        grid-area: twelve;
+    }
+    .title {
+        h2 {
+            color: $clr-paragraph-light
+        }
+    }
+}
+
+@media screen and (max-width: 640px){
+    .courses-grid{
+        gap: 2rem;
+        width: min(90%);
+        .title {
+            h2{
+                font-size: 1.1rem;
+            }
+        }
+        .cours {
+            p{
+                font-size: 0.7rem; 
+            }
+            i{
+                font-size: 2rem;
+            }
+        }
+    }
+} 

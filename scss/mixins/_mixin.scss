@@ -1,0 +1,9 @@
+@mixin basicLayout ($display , $fr , $areas ) {
+    display: $display;
+    gap: 1.5rem;
+    grid-auto-columns: $fr;
+    grid-template-areas: $areas;
+    padding-block: 2rem;
+    width: min(80%);
+    margin-inline: auto;
+}

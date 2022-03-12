@@ -1,0 +1,57 @@
+@import "colors.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: $clr-header-foo;
+    box-shadow: $clr-box-shadow;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+main {
+    background-image: $clr-bg-main;
+}
+
+footer {
+    background-color: $clr-header-foo;
+    box-shadow: $clr-footer-shadow;
+    .footer-container {
+        height: auto;
+        .foo-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            h3{
+                padding: 1rem;
+                font-size: 1rem;
+                color: $clr-primary;
+            }
+        }
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            list-style: none;
+            padding: .6rem;
+            #foo {
+                cursor: pointer;
+                i {
+                    margin: 0.3125rem;
+                    font-size: 20px;
+                    color: $clr-primary;
+                }
+                i:hover {
+                    color: $clr-secondary;
+                }
+            }
+        }
+    }
+}
