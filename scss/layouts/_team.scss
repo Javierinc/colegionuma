@@ -18,11 +18,12 @@
             justify-content: space-between;
             align-items: center;
             .card-team {
-                background-image: $clr-bg-card-light;
+                background-color: $clr-secondary;
                 transition: .9s ease;
             }
             .card-team:hover{
                 transform: translateY(-5px);
+                box-shadow: $clr-card-shadow;
             }
             .card {
                 display: flex;
@@ -30,10 +31,10 @@
                 flex: 1 1 21rem;
                 align-items: center;
                 margin: 0.625rem 1.25rem;
-                border-radius: 0.625rem;
-                box-shadow: $clr-card-shadow;
+                border-radius: 0.625rem;  
                 padding: 0.625rem 1.25rem;
-                color: $clr-primary;
+                color: $clr-paragraph-light;
+                text-align: center;
                 img {
                     width: 50%;
                     border-radius: 50%;

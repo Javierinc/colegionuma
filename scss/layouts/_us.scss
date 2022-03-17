@@ -8,10 +8,9 @@
         padding: 2rem;
         border-radius: 0.5rem;
         background-image: $clr-bg-card-light;
-        box-shadow: $clr-card-shadow;
         color: $clr-paragraph-dark;
         margin-bottom: 20px;
-        transition: .9s ease;
+        transition: 1.1s ease;
     }
     .atributes {
         p{
@@ -20,6 +19,8 @@
     }
     .atributes:hover {
         transform: translate(5px, -10px);
+        box-shadow: $clr-card-shadow;
+
     }
 }
 
