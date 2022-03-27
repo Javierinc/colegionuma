@@ -35,6 +35,10 @@ footer {
                 color: $clr-primary;
             }
         }
+        p {
+            text-align: center;
+            font-size: 0.7rem;
+        }
         .flex-row {
             display: flex;
             flex-direction: row;

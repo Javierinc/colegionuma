@@ -1,7 +1,7 @@
 {
-  "name": "tercera-entrega-proyecto",
+  "name": "entrega-final-proyecto",
   "version": "1.0.0",
-  "description": "",
+  "description": "entrega final de proyecto colegio numa, cuenta con las ultimas modificaciones",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
